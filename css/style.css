@@ -1,0 +1,54 @@
+
+body {
+	overflow-x: hidden;
+	background: #181e20;
+	font-family: "Poppins", sans-serif;
+}
+.font-mono {
+	font-family: "Space Mono", monospace;
+}
+
+.navbar-brand-img{width:45vw}
+
+
+#site-header {
+	z-index: 1;
+	background: rgba(24,30,32,0.9);
+}
+#banner {
+	background: linear-gradient(180deg, #181e20, #0e2734);
+}
+#banner .banner-bg-pattern {
+	width: 100vw;
+}
+#banner .banner-title {
+	background: linear-gradient(180deg, rgba(201, 255, 245, 0) -145%, #00F0FF -145%, #FFF8C9 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#banner .banner-subtitle {
+	color: #FFF8C9;
+}
+.header-btn-bg {
+	padding: 2px;
+	border-radius: 5px;
+	background: linear-gradient(90deg, #00FFE0 0.95%, #D56A4F 100%);
+}
+.header-btn {
+	background: #181e20 !important;
+	color: #FFF8C9 !important;
+}
+
+.webgl {
+	outline: 0;
+	width: 50vw;
+	height: 100vh;
+	display: flex;
+	position: absolute;
+	right: 0;
+}
+
+@media(min-width: 640px){
+	#banner .banner-bg-pattern{width:50vw}
+	.navbar-brand-img{width:240px}
+}

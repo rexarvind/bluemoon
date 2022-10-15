@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bluemoon Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+
+    <link rel="preload" as="style" href="./css/bootstrap.min.css" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="preload" as="style" href="./css/style.css" />
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <link rel="preload" as="style" href="./css/aos.css" />
+    <link href="./css/aos.css" rel="stylesheet" />
+
+    <link rel="preload" as="style" href="./css/slick.min.css" />
+    <link href="./css/slick.min.css" rel="stylesheet" />
+
+    <link rel="preload" as="style" href="./css/slick-theme.min.css" />
+    <link href="./css/slick-theme.min.css" rel="stylesheet" />
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" />
+
+    <script defer src="./js/jquery.min.js"></script>
+    <script defer src="./js/bootstrap.bundle.min.js"></script>
+    <script defer src="./js/three.min.js"></script>
+    <script defer src="./js/GLTFLoader.js"></script>
+    <script defer src="./js/aos.js"></script>
+    <script defer src="./js/slick.min.js"></script>
+    <script defer src="./js/main.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+    <header id="site-header" class="position-sticky top-0" data-aos="fade-down" data-aos-delay="450" data-aos-duration="750">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-xxl">
+
+                <a class="navbar-brand" href="#!">
+                    <img src="./img/logo.svg" class="navbar-brand-img" alt="logo" />
+                </a>
+
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#main-header" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main-header">
+                    <ul class="mx-auto navbar-nav">
+                        <li class="nav-item active">
+                            <a data-aos="fade-left" data-aos-delay="1000" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="#!">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-aos="fade-left" data-aos-delay="1200" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="#!">MoonHybrid</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-aos="fade-left" data-aos-delay="1400" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="#!">Borrow</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-aos="fade-left" data-aos-delay="1600" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="#!">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-aos="fade-left" data-aos-delay="1800" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="support.html">Support</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex gap-3">
+                        <div class="header-btn-bg" data-aos="fade-left" data-aos-delay="2000" data-aos-duration="500">
+                            <a href="#!" class="header-btn btn shadow-none fw-semibold text-uppercase">Login</a>
+                        </div>
+                        <div class="header-btn-bg" data-aos="fade-left" data-aos-delay="2200" data-aos-duration="500">
+                            <a href="#!" class="header-btn btn shadow-none fw-semibold text-uppercase">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section id="banner" class="position-relative">
+            <img src="./img/banner/hero-bg.png" class="banner-bg-pattern position-absolute start-0 bottom-0" data-aos="zoom-in-right" data-aos-duration="2000" alt="banner background" />
+            <div class="container-xxl py-5 position-relative">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <h1 class="display-4 banner-title mb-3 font-mono fw-bold text-uppercase" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">The fastest growing hybrid stake and borrow system in crypto</h1>
+                        <h3 class="h3 banner-subtitle mb-4 font-mono text-uppercase" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500">Earn the highest APY on digital assets safely</h3>
+                        <div class="d-flex gap-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+                            <a href="#!" class="btn btn-light btn-lg px-4 border-2 fw-bold">Stake Now</a>
+                            <a href="#!" class="btn btn-outline-light btn-lg px-4 border border-3 fw-bold">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+                <canvas class="webgl" id="cwa_moon"></canvas>
+            </div>
+        </section>
+
+        <section class="container-xxl py-5">
+            <h1 class="text-center">Coming soon...</h1>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
