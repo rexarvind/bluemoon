@@ -1,14 +1,19 @@
 
 body {
-	overflow-x: hidden;
 	background: #181e20;
 	font-family: "Poppins", sans-serif;
 }
 .font-mono {
 	font-family: "Space Mono", monospace;
 }
+.overflow-x-hidden {overflow-x:hidden !important}
 
 .navbar-brand-img{width:45vw}
+
+.scrollbar-transparent::-webkit-scrollbar-thumb,
+.scrollbar-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 
 #site-header {
@@ -40,16 +45,20 @@ body {
 }
 
 .webgl {
-	outline: 0;
-	width: 50vw;
-	height: 100vh;
-	display: flex;
-	position: absolute;
-	top: -50px;
-	right: 0;
+	/*position: absolute;*/
+	width: 100%;
+	transition: transform 300ms ease-in-out;
 }
 
 @media(min-width: 640px){
 	#banner .banner-bg-pattern{width:50vw}
 	.navbar-brand-img{width:240px}
+}
+
+@media(min-width: 768px){
+	.webgl {transform:scale(1.4)}
+}
+
+@media(min-width: 1200px){
+	.webgl {transform:scale(1.2)}
 }

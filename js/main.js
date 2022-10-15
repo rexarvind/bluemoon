@@ -2,6 +2,8 @@ jQuery(function ($) {
 
     AOS.init();
 
+    window.scrollTo({ top:0, behavior: 'smooth' });
+
     $('.navbar-toggler').on('click', function() {
         jQuery('.headnev').css('background','#181e20e6');
     });
@@ -14,20 +16,6 @@ jQuery(function ($) {
         } else {
             jQuery('.headnev').css('background','transparent');
         }
-    });
-
-    window.addEventListener('resize', () => {
-        // Update sizes
-        sizes.width = canvas.clientWidth;
-        sizes.height = canvas.clientHeight;
-
-        // Update camera
-        camera.aspect = sizes.width / sizes.height;
-        camera.updateProjectionMatrix();
-
-        // Update renderer
-        renderer.setSize(sizes.width, sizes.height, false);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     });
 
     jQuery('.cwa_partners_slider').slick({
@@ -52,10 +40,10 @@ jQuery(function ($) {
         height: canvas.clientHeight
     };
 
-    loader.load('https://dev-bluemoon.netlify.app/model/crate.glb', function ( gltf ) {
+    loader.load('https://stageversion.com/bluemoon/model/crate.glb', function ( gltf ) {
         moon = gltf.scene;
         moon.scale.set(1, 1, 1);
-        moon.position.set(0, 0, -6);
+        moon.position.set(0, 0, -3.5);
         moon.rotation.set(0, 0, 0);
         scene.add(moon);
     }, undefined, function ( error ) {
@@ -86,5 +74,19 @@ jQuery(function ($) {
         moon.rotation.y += 0.001;
     }
     animate();
+
+    $(window).resize(function() {
+        // Update sizes
+        sizes.width = canvas.clientWidth;
+        sizes.height = canvas.clientHeight;
+
+        // Update camera
+        camera.aspect = sizes.width / sizes.height;
+        camera.updateProjectionMatrix();
+
+        // Update renderer
+        renderer.setSize(sizes.width, sizes.height, false);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
 
 });

@@ -36,7 +36,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
-    <header id="site-header" class="position-sticky top-0" data-aos="fade-down" data-aos-delay="450" data-aos-duration="750">
+    <header id="site-header" class="position-sticky top-0 overflow-x-hidden" data-aos-once="true" data-aos="fade-down" data-aos-delay="450" data-aos-duration="750">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-xxl">
 
@@ -68,10 +68,10 @@
                     </ul>
 
                     <div class="d-flex gap-3">
-                        <div class="header-btn-bg" data-aos="fade-left" data-aos-delay="2000" data-aos-duration="500">
+                        <div class="header-btn-bg" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="500">
                             <a href="#!" class="header-btn btn shadow-none fw-semibold text-uppercase">Login</a>
                         </div>
-                        <div class="header-btn-bg" data-aos="fade-left" data-aos-delay="2200" data-aos-duration="500">
+                        <div class="header-btn-bg" data-aos="fade-right" data-aos-delay="2200" data-aos-duration="500">
                             <a href="#!" class="header-btn btn shadow-none fw-semibold text-uppercase">Sign Up</a>
                         </div>
                     </div>
@@ -80,14 +80,13 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="overflow-x-hidden">
 
-        <section id="banner" class="position-relative">
+        <section id="banner" class="position-relative pb-5">
             <img src="./img/banner/hero-bg.png" class="banner-bg-pattern position-absolute start-0 bottom-0" data-aos="zoom-in-right" data-aos-duration="2000" alt="banner background" />
-            <canvas class="webgl" id="cwa_moon"></canvas>
             <div class="container-xxl py-5 position-relative">
-                <div class="row align-items-center">
-                    <div class="col-md-7">
+                <div class="row gy-4">
+                    <div class="col-md-6 align-self-center">
                         <h1 class="display-4 banner-title mb-3 font-mono fw-bold text-uppercase" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">The fastest growing hybrid stake and borrow system in crypto</h1>
                         <h3 class="h3 banner-subtitle mb-4 font-mono text-uppercase" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500">Earn the highest APY on digital assets safely</h3>
                         <div class="d-flex gap-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
@@ -95,7 +94,9 @@
                             <a href="#!" class="btn btn-outline-light btn-lg px-4 border border-3 fw-bold">Learn More</a>
                         </div>
                     </div>
-                    <div class="col-md-5"></div>
+                    <div class="col-md-6 align-self-center position-relative">
+                        <canvas class="webgl h-auto" id="cwa_moon"></canvas>
+                    </div>
                 </div>
             </div>
         </section>
