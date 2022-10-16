@@ -1,113 +1,601 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bluemoon Demo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 
-    <link rel="preload" as="style" href="./css/bootstrap.min.css" />
-    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bluemoon Demo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com/" />
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 
-    <link rel="preload" as="style" href="./css/style.css" />
-    <link href="./css/style.css" rel="stylesheet" />
+        <link rel="preload" as="style" href="./css/bootstrap.min.css" />
+        <link href="./css/bootstrap.min.css" rel="stylesheet" />
 
-    <link rel="preload" as="style" href="./css/aos.css" />
-    <link href="./css/aos.css" rel="stylesheet" />
+        <link rel="preload" as="style" href="./css/style.css" />
+        <link href="./css/style.css" rel="stylesheet" />
 
-    <link rel="preload" as="style" href="./css/slick.min.css" />
-    <link href="./css/slick.min.css" rel="stylesheet" />
+        <link rel="preload" as="style" href="./css/aos.css" />
+        <link href="./css/aos.css" rel="stylesheet" />
 
-    <link rel="preload" as="style" href="./css/slick-theme.min.css" />
-    <link href="./css/slick-theme.min.css" rel="stylesheet" />
+        <link rel="preload" as="style" href="./css/slick.min.css" />
+        <link href="./css/slick.min.css" rel="stylesheet" />
 
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" />
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" />
+        <link rel="preload" as="style" href="./css/slick-theme.min.css" />
+        <link href="./css/slick-theme.min.css" rel="stylesheet" />
 
-    <script defer src="./js/jquery.min.js"></script>
-    <script defer src="./js/bootstrap.bundle.min.js"></script>
-    <script defer src="./js/three.min.js"></script>
-    <script defer src="./js/GLTFLoader.js"></script>
-    <script defer src="./js/aos.js"></script>
-    <script defer src="./js/slick.min.js"></script>
-    <script defer src="./js/main.js"></script>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" />
+        <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-</head>
-<body>
-    <header id="site-header" class="position-sticky top-0 overflow-x-hidden" data-aos-once="true" data-aos="fade-down" data-aos-delay="450" data-aos-duration="750">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-xl">
+        <script defer src="./js/jquery.min.js"></script>
+        <script defer src="./js/bootstrap.bundle.min.js"></script>
+        <script defer src="./js/three.min.js"></script>
+        <script defer src="./js/GLTFLoader.js"></script>
+        <script defer src="./js/aos.js"></script>
+        <script defer src="./js/slick.min.js"></script>
+        <script defer src="./js/typing.js"></script>
+        <script defer src="./js/main.js"></script>
 
-                <a class="navbar-brand" href="#!">
-                    <img src="./img/logo.svg" class="navbar-brand-img" alt="logo" />
-                </a>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </head>
 
-                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#main-header" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <body>
+        <header id="site-header" class="position-sticky top-0 overflow-x-hidden" data-aos-once="true" data-aos="fade-down" data-aos-delay="450" data-aos-duration="750">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-xl">
 
-                <div class="collapse navbar-collapse" id="main-header">
-                    <ul class="mx-auto navbar-nav">
-                        <li class="nav-item active">
-                            <a data-aos="fade-left" data-aos-delay="1000" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="#!">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-aos="fade-left" data-aos-delay="1200" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="#!">MoonHybrid</a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-aos="fade-left" data-aos-delay="1400" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="#!">Borrow</a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-aos="fade-left" data-aos-delay="1600" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="#!">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-aos="fade-left" data-aos-delay="1800" data-aos-duration="500" class="nav-link fw-semibold text-uppercase link-light" href="support.html">Support</a>
-                        </li>
-                    </ul>
+                    <a class="navbar-brand" href="#!">
+                        <img src="./img/logo.svg" class="navbar-brand-img" alt="logo" />
+                    </a>
 
-                    <div class="d-flex gap-3">
-                        <div class="header-btn-bg" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="500">
-                            <a href="#!" class="header-btn btn shadow-none fw-semibold text-uppercase">Login</a>
+                    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#main-header" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="main-header">
+                        <ul class="mx-auto navbar-nav">
+                            <li class="nav-item active">
+                                <a data-aos="fade-left" data-aos-delay="1000" data-aos-duration="500" data-aos-once="true" class="nav-link fw-semibold text-uppercase link-light" href="#!">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-aos="fade-left" data-aos-delay="1200" data-aos-duration="500" data-aos-once="true" class="nav-link fw-semibold text-uppercase link-light" href="#!">MoonHybrid</a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-aos="fade-left" data-aos-delay="1400" data-aos-duration="500" data-aos-once="true" class="nav-link fw-semibold text-uppercase link-light" href="#!">Borrow</a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-aos="fade-left" data-aos-delay="1600" data-aos-duration="500" data-aos-once="true" class="nav-link fw-semibold text-uppercase link-light" href="#!">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-aos="fade-left" data-aos-delay="1800" data-aos-duration="500" data-aos-once="true" class="nav-link fw-semibold text-uppercase link-light" href="support.html">Support</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex gap-3">
+                            <div class="header-btn-bg" data-aos="fade-right" data-aos-delay="2000" data-aos-once="true" data-aos-duration="500">
+                                <a href="#!" class="header-btn btn shadow-none fw-semibold text-uppercase">Login</a>
+                            </div>
+                            <div class="header-btn-bg" data-aos="fade-right" data-aos-delay="2200" data-aos-once="true" data-aos-duration="500">
+                                <a href="#!" class="header-btn btn shadow-none fw-semibold text-uppercase">Sign Up</a>
+                            </div>
                         </div>
-                        <div class="header-btn-bg" data-aos="fade-right" data-aos-delay="2200" data-aos-duration="500">
-                            <a href="#!" class="header-btn btn shadow-none fw-semibold text-uppercase">Sign Up</a>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <main class="overflow-x-hidden">
+
+            <section id="banner" class="position-relative pb-5">
+                <img src="./img/banner/hero-bg.png" class="banner-bg-pattern position-absolute start-0 bottom-0" data-aos="zoom-in-right" data-aos-duration="2000" alt="banner background" />
+                <div class="container-xl py-5 position-relative">
+                    <div class="row gy-4">
+                        <div class="col-md-6 col-lg-7 align-self-center">
+                            <h1 class="display-4 banner-title mb-3 font-mono fw-bold text-uppercase" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+                                The fastest growing hybrid stake and system <div id="type_here"></div>
+                            </h1>
+                            <h3 class="h3 banner-subtitle mb-4 font-mono text-uppercase" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500">Earn the highest APY on digital assets safely</h3>
+                            <div class="d-flex gap-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+                                <a href="#!" class="btn btn-light btn-lg px-4 border-2 fw-bold">Stake Now</a>
+                                <a href="#!" class="btn btn-outline-light btn-lg px-4 border border-3 fw-bold">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5 align-self-center position-relative">
+                            <canvas class="webgl h-auto" id="cwa_moon"></canvas>
                         </div>
                     </div>
                 </div>
+            </section>
 
-            </div>
-        </nav>
-    </header>
-    <main class="overflow-x-hidden">
+            <section id="section1" class="position-relative py-5">
+                <img src="./img/bg-2.png" class="position-absolute top-0 start-0 end-0 bottom-0 w-100 h-100 object-cover object-center" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                <div class="container-xl py-5 position-relative">
+                    <div class="cwa_circle_left_1" data-aos="fade-right" data-aos-once="true" data-aos-delay="200" data-aos-duration="800"></div>
+                    <div class="cwa_circle_left_2" data-aos="fade-right" data-aos-once="true" data-aos-delay="400" data-aos-duration="800"></div>
+                    <div class="cwa_circle_right_1" data-aos="fade-left" data-aos-once="true" data-aos-delay="200" data-aos-duration="800"></div>
+                    <div class="cwa_circle_right_2" data-aos="fade-left" data-aos-once="true" data-aos-delay="400" data-aos-duration="800"></div>
+                    <h3 class="display-4 text-center text-light font-mono fw-bold" data-aos="fade-in" data-aos-once="true" data-aos-delay="300" data-aos-duration="1200">
+                        Total assets staked value: <span class="fw-normal">167,200,530</span>
+                    </h3>
+                </div>
+            </section>
 
-        <section id="banner" class="position-relative pb-5">
-            <img src="./img/banner/hero-bg.png" class="banner-bg-pattern position-absolute start-0 bottom-0" data-aos="zoom-in-right" data-aos-duration="2000" alt="banner background" />
-            <div class="container-xl py-5 position-relative">
-                <div class="row gy-4">
-                    <div class="col-md-6 col-lg-7 align-self-center">
-                        <h1 class="display-4 banner-title mb-3 font-mono fw-bold text-uppercase" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">The fastest growing hybrid stake and borrow system in crypto</h1>
-                        <h3 class="h3 banner-subtitle mb-4 font-mono text-uppercase" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500">Earn the highest APY on digital assets safely</h3>
-                        <div class="d-flex gap-3" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
-                            <a href="#!" class="btn btn-light btn-lg px-4 border-2 fw-bold">Stake Now</a>
-                            <a href="#!" class="btn btn-outline-light btn-lg px-4 border border-3 fw-bold">Learn More</a>
-                        </div>
+            <div class="cwa_section_3 d-flex flex-column justify-content-start align-items-center" id="fastgrowing">
+                <img src="./img/stake_now_left.png" class="cwa_section3_circle_1" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
+                <img src="./img/stake_now_right.png" class="cwa_section3_circle_2" data-aos="fade-left" data-aos-delay="200" data-aos-duration="800">
+                <div class="d-flex flex-column position-relative cwa_section_3_title_wrap ">
+                    <h1 class="cwa_section_3_title">A <b>Fast Growing</b> Ecosystem supporting <b>multi chain</b> coins</h1>
+                    <div class="small-divider"></div>
+                    <div class="cwa_section_3_subtitle">
+                        <div>- No lock period</div>
+                        <div>- Rewards paid every day</div>
+                        <div>- Swap live between protocols</div>
                     </div>
-                    <div class="col-md-6 col-lg-5 align-self-center position-relative">
-                        <canvas class="webgl h-auto" id="cwa_moon"></canvas>
+                    <a href="register.html" class="cwa_stake_now_btn">Stake Now</a>
+                </div>
+                <div class="container-xl">
+                    <div class="row">
+                        <div class="flex-row d-flex w-100 cwa_coins_widget">
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/bitcoin.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>BTC</h4>
+                                        <h5>Bitcoin</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">15% APY</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/Ethereum.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>ETH</h4>
+                                        <h5>Ethereum</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">17%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/usdt.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>USDT</h4>
+                                        <h5>Tether</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">21%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/usdc.svg" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>USDC</h4>
+                                        <h5>USD Coin</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">21%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/cardano.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>ADA</h4>
+                                        <h5>Cardano</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">10%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/bnb.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>BNB</h4>
+                                        <h5>Binance Coin</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">13.50%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/solana.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>SOL</h4>
+                                        <h5>Solana</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">11.50%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/Polygon.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>MATIC</h4>
+                                        <h5>Polygon</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">22.50%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/polkadot.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>DOT</h4>
+                                        <h5>Polkadot</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">17.70%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/25.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>NEAR</h4>
+                                        <h5>NEAR Protocol</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">13%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/Chainlink.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>LINK</h4>
+                                        <h5>CHAINLINK</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">15%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/28.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>UNIQG</h4>
+                                        <h5>UNIQG</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">58%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/Osmosis.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>OSMO</h4>
+                                        <h5>Osmosis</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">67%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/Avax.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>AVAX</h4>
+                                        <h5>Avalanche</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">14.50%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/fantom.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>FTM</h4>
+                                        <h5>Fantom</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">17%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/harmony.svg" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>ONE</h4>
+                                        <h5>Harmony</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">21.50%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/tezos.svg" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>XTZ</h4>
+                                        <h5>Tezos</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">7%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/30.svg" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>BM Hybrid</h4>
+                                        <h5>Bluemoon Hybrid</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">24.50%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/32.png" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>BM Stable</h4>
+                                        <h5>Bluemoon Stable</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">23%</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="register.html" class="cwa_coin_wrap" data-aos="zoom-out" data-aos-once="true" data-aos-delay="100" data-aos-duration="800">
+                                <div class="cwa_coin_title">
+                                    <div class="me-2 d-flex">
+                                        <img src="./img/coin/31.svg" class="cwa_coin_img">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <h4>BM Defi</h4>
+                                        <h5>Bluemoon Defi</h5>
+                                    </div>
+                                </div>
+                                <div class="flex-row d-flex w-100">
+                                    <div class="w-1/2 d-flex flex-column">
+                                        <p class="cwa_apy_title">APY</p>
+                                        <p class="cwa_apy_perc">31%</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <section class="overflow-hidden">
+                <div class="cwa_section_5 d-flex flex-column justify-content-center align-items-center">
+                    <div class="cwa_easy_circle_1" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500"></div>
+                    <div class="cwa_easy_circle_2" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500"></div>
+                    <div class="cwa_easy_circle_3" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500"></div>
+                    <div class="cwa_easy_circle_4" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500"></div>
+                    <div class="cwa_easy_circle_5" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500"></div>
+                    <div class="container position-relative">
+                        <div class="row">
+                            <div class="cwa_easy_wrap">
+                                <div class="justify-center d-flex flex-column align-items-center">
+                                    <h1 class="cwa_easy_title">Easy to use dashboard</h1>
+                                    <div class="small-divider"></div>
+                                    <p class="cwa_easy_subtitle">BLUEMOON STAKE Dashboard is simple enough for everyone. Stay in total control of your assets anytime, anywhere. Follow earnings, compounding, and withdrawals all in one place. Stake, borrow and swap coins in one click.</p>
+                                </div>
+                                <div class="cwa_monitor_wrap row">
+                                    <div class="col-md-6">
+                                        <img src="./img/desktop-img.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="cwa_monitor_text">
+                                            <p class="desktop-text">Track your portfolio, and keep updated on rewards and compounding.</p>
+                                            <div class="cwa_progress_wrap">
+                                                <div class="cwa_progress_eth"><span>58%</span></div>
+                                                <div class="cwa_progress_pol"><span>10%</span></div>
+                                                <div class="cwa_progress_bin"><span>20%</span></div>
+                                                <div class="cwa_progress_sol"><span>12%</span></div>
+                                            </div>
+                                            <div class="flex-row flex-wrap d-flex">
+                                                <div class="cwa_progress_detail cwa_pd_eth">ETH</div>
+                                                <div class="cwa_progress_detail cwa_pd_bin">BTC</div>
+                                                <div class="cwa_progress_detail cwa_pd_pol">Polygon</div>
+                                                <div class="cwa_progress_detail cwa_pd_sol">HYBRID</div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <section class="container-xl py-5">
-            <h1 class="text-center">Coming soon...</h1>
-        </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    </main>
-    <footer>
+        </main>
+        <footer class="footer-div overflow-hidden">
+            <div class="container">
+                <div class="mb-4 row align-items-center">
+                    <div class="col-md-6">
+                        <img src="./img/logo.svg" class="img cwa_footer_logo">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="blue-title">Blue Moon Headquarters:</div>
+                        <div class="blue-pera"> Ülemiste City, Keevise 3, 11415 Talin, Estonia</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <div class="footer-links-title">Quick Links:</div>
+                                <ul class="footer-links">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="register.html">Register</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="footer-links-title ">Help:</div>
+                                <ul class="footer-links ">
+                                    <li><a href="support.html">FAQ</a></li>
+                                    <li><a href="http://discord.gg/bluemoonstake" target="_blank">Community</a></li>
+                                    <li><a href="support.html">Contact</a></li>
+                                    <li><a href="https://calendly.com/bluemoon_stake" target="_blank">Call An Expert</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="footer-links-title ">Legal:</div>
+                                <ul class="footer-links ">
+                                    <li><a href="#" onclick='window.open("assetsnew/Terms-of-Use.pdf");return false;'>Terms of Use</a></li>
+                                    <li><a href="#" onclick='window.open("assetsnew/Privacy-Policy.pdf");return false;'>Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 col-6">
+                                <div class="footer-links-title ">Misc:</div>
+                                <ul class="footer-links ">
+                                    <li><a href="support.html">Career</a></li>
+                                    <li><a href="support.html">Security</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="footer-links-title follow-us-title" align="center">Follow Us:</div>
+                        <ul class="foter-social-links">
+                            <li>
+                                <a href="https://discord.gg/bzGbsmeaXH" target="_blank"><img src="./img/discort.svg" class=""></a>
+                            </li>
+                            <li>
+                                <a href="https://t.me/bluemoonstake" target="_blank"><img src="./img/send.svg" class=""></a>
+                            </li>
 
-    </footer>
-</body>
+                            <li>
+                                <a href="https://twitter.com/Bluemoonstake" target="_blank"><img src="./img/twitter.svg" class=""></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <div class="copy-right ">
+                            Blue Moon. 2022. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
 </html>
